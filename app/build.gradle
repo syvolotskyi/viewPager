@@ -16,10 +16,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions "country"
+    productFlavors {
+        "georgia" {
+            dimension 'country'
+            applicationId 'ge.space.design.georgia'
+            matchingFallbacks ["georgia"]
+
+        }
+
+        "uzbekistan" {
+            dimension 'country'
+            applicationId 'ge.space.design.uzbekistan'
+            matchingFallbacks ["uzbekistan"]
+        }
+    }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:design:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'

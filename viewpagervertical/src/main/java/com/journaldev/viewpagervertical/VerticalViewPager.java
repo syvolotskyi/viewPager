@@ -1,6 +1,8 @@
 package com.journaldev.viewpagervertical;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -22,6 +24,7 @@ public class VerticalViewPager extends ViewPager {
     private void init() {
         setPageTransformer(true, new VerticalPageTransformerAnimate());
         setOverScrollMode(OVER_SCROLL_NEVER);
+        setBackgroundColor(ContextCompat.getColor(getContext(), R.color.background));
     }
 
     /**
