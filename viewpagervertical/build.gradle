@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.anupamchugh'
+group='com.github.syvolotskyi'
 
 android {
     compileSdkVersion 26
@@ -23,19 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    flavorDimensions "country"
-    productFlavors {
-        "georgia" {
-            dimension 'country'
-            matchingFallbacks ["georgia"]
 
-        }
-
-        "uzbekistan" {
-            dimension 'country'
-            matchingFallbacks ["uzbekistan"]
-        }
-    }
 }
 
 dependencies {
