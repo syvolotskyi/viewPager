@@ -16,7 +16,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions "country"
+    productFlavors {
+        "georgia" {
+            dimension 'country'
+            applicationId 'ge.space.design.georgia'
+            matchingFallbacks ["georgia"]
 
+        }
+
+        "uzbekistan" {
+            dimension 'country'
+            applicationId 'ge.space.design.uzbekistan'
+            matchingFallbacks ["uzbekistan"]
+        }
+    }
 }
 
 dependencies {
@@ -29,3 +43,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation project(':viewpagervertical')
 }
+
